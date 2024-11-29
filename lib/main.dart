@@ -122,6 +122,13 @@ class Home extends StatelessWidget {
                  Text('Simple Text'),
                ],
              ),
+           ),
+           InkWell(
+             splashColor: Colors.green,// button color after effect
+             onTap: (){
+               print("Ink Well");
+             },
+             child:Text('Behave like Button '),
            )
          ],
        ),
