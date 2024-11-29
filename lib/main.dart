@@ -77,6 +77,7 @@ class Home extends StatelessWidget {
            ),
            SizedBox(height: 16),
 
+
            IconButton(
              style: IconButton.styleFrom(
              ),
@@ -96,6 +97,32 @@ class Home extends StatelessWidget {
                },
                child: Text('Tapped Here'),
            ),
+
+           GestureDetector(
+             onTap: (){
+               print('just one tap');
+             },
+             onDoubleTap: (){
+               print('Just Doubel tap');
+             },
+             onLongPress: (){
+               print("on long Press");
+             },
+             onLongPressCancel: (){
+               print("On long press cancle");
+             },
+             onLongPressEnd: (details){
+               print("On Long press End");
+             },
+             child: Column(
+               children: [
+                 Text('Simple Text'),
+                 Text('Simple Text'),
+                 Text('Simple Text'),
+                 Text('Simple Text'),
+               ],
+             ),
+           )
          ],
        ),
      ),  
