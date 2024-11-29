@@ -57,7 +57,20 @@ class Home extends StatelessWidget {
 
              ),
              onPressed: (){
-                print('Tap on elevated Button ');
+                 showDialog(
+                   barrierColor: Colors.green,
+                     barrierDismissible: false,
+                     context: context, builder: (context){
+                   return AlertDialog(
+                     title: Text('Delete'),
+                      content: Text('Are you sure ?'),
+                     actions: [
+                       TextButton(onPressed: ( ){}, child: Text('No')),
+                       TextButton(onPressed: ( ){}, child: Text('Yes')),
+                     ],
+                   );
+                 }
+                 );
              },
                child:const Text('Tap'),
 
@@ -129,7 +142,8 @@ class Home extends StatelessWidget {
                print("Ink Well");
              },
              child:Text('Behave like Button '),
-           )
+           ),
+
          ],
        ),
      ),  
